@@ -1,0 +1,49 @@
+[
+  {
+    "studentId": 123456,
+    "name": "Pamella",
+    "surname": "Anderson",
+    "class": [
+      "Literature",
+      "Math",
+      "Physics"
+    ],
+    "notes": [
+      8,
+      3,
+      4
+    ]
+  },
+  {
+    "studentId": 324871,
+    "name": "Steven",
+    "surname": "Seagal",
+    "class": [
+      "Geography",
+      "Math",
+      "Chemistry"
+    ],
+    "notes": [
+      5,
+      10
+    ]
+  },
+  {
+    "studentId": 729471,
+    "name": "Keanu",
+    "surname": "Reeves",
+    "class": [
+      "French",
+      "Spanish",
+      "Geography",
+      "Physics",
+      "Economycs"
+    ],
+    "notes": [
+      2,
+      7,
+      4,
+      1
+    ]
+  }
+]
