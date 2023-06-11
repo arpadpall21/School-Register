@@ -1,45 +1,47 @@
 [
   {
-    "studentId": 123456,
+    "studentId": 1234,
     "name": "Pamella",
     "surname": "Anderson",
-    "class": [
+    "classes": [
       "Literature",
       "Math",
-      "Physics"
+      "Physics",
+      "Hungarian"
     ],
-    "notes": [
+    "grades": [
       8,
       3,
       4
     ]
   },
   {
-    "studentId": 324871,
+    "studentId": 324,
     "name": "Steven",
     "surname": "Seagal",
-    "class": [
+    "classes": [
       "Geography",
       "Math",
       "Chemistry"
     ],
-    "notes": [
+    "grades": [
       5,
       10
     ]
   },
   {
-    "studentId": 729471,
+    "studentId": 729,
     "name": "Keanu",
     "surname": "Reeves",
-    "class": [
+    "classes": [
       "French",
       "Spanish",
       "Geography",
       "Physics",
-      "Economycs"
+      "Economycs",
+      "English"
     ],
-    "notes": [
+    "grades": [
       2,
       7,
       4,
