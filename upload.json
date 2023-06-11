@@ -1,6 +1,6 @@
 [
   {
-    "studentId": 1234,
+    "studentId": 1,
     "name": "Pamella",
     "surname": "Anderson",
     "classes": [
@@ -10,13 +10,28 @@
       "Hungarian"
     ],
     "grades": [
-      8,
-      3,
-      4
+      2,
+      2,
+      2,
+      2,
+      2
     ]
   },
   {
-    "studentId": 324,
+    "studentId": 2,
+    "name": "Pamella",
+    "surname": "Harris",
+    "classes": [
+      "Literature",
+      "Math",
+      "Physics",
+      "Hungarian"
+    ],
+    "grades": [
+    ]
+  },
+  {
+    "studentId": 3,
     "name": "Steven",
     "surname": "Seagal",
     "classes": [
@@ -30,7 +45,7 @@
     ]
   },
   {
-    "studentId": 729,
+    "studentId": 4,
     "name": "Keanu",
     "surname": "Reeves",
     "classes": [

@@ -11,20 +11,21 @@ class Student(Base):
     name = Column(String(127))
     surname = Column(String(127))
     grades = relationship('Grade', back_populates='student', uselist=True)
-    classes = relationship('Class', secondary='student_class_link')
+    classes = relationship('Class', secondary='student_class_link', overlaps='classes')
 
 
 class Grade(Base):
     __tablename__ = 'grade'
-    student_id = Column(Integer, ForeignKey('student.student_id'), primary_key=True)
-    grade = Column(SmallInteger, primary_key=True)
+    id = Column(Integer, primary_key=True)
+    student_id = Column(Integer, ForeignKey('student.student_id'))
+    grade = Column(SmallInteger)
     student = relationship('Student', back_populates='grades', uselist=False)
 
 
 class Class(Base):
     __tablename__ = 'class'
     class_name = Column(String(31), primary_key=True)
-    students = relationship('Student', secondary='student_class_link')
+    students = relationship('Student', secondary='student_class_link', overlaps='classes')
 
 
 class StudentClassLink(Base):
