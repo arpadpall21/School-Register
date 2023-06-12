@@ -20,11 +20,12 @@ Storing and retrieving student data with SQLAlchemy and Alembic ORM tools
 - Do this 
   - implement argparser
   - connection to a real db?
+  - python app.py -h
   - python app.py upload (create)
-  - python app.py clear 
   - python app.py get <studentId>
-  - python app.py delete <studentId>
   - python app.py search [name]
+  - python app.py delete <studentId>
+  - python app.py clear 
   
   
   
