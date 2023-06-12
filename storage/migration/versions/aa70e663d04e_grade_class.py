@@ -1,8 +1,8 @@
 """grade_class
 
-Revision ID: fc571d4782b5
-Revises: 5049d029f002
-Create Date: 2023-06-11 12:16:16.572459
+Revision ID: aa70e663d04e
+Revises: d82120b7247d
+Create Date: 2023-06-12 21:31:57.658420
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'fc571d4782b5'
-down_revision = '5049d029f002'
+revision = 'aa70e663d04e'
+down_revision = 'd82120b7247d'
 branch_labels = None
 depends_on = None
 

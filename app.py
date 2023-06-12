@@ -26,17 +26,11 @@ def main():
             search(session, action_value)
         elif action == 'delete':
             if action_value is None:
-                print('No student id provided: [python app.py delete <student_id>]')
+                print('No student_id provided: [python app.py delete <student_id>]')
                 return
-            delete_success = delete(session, action_value)
-            session.commit()
-            if delete_success:
-                print(f'student deleted with student_id: {action_value}')
+            delete(session, int(action_value))
         elif action == 'clear':
-            delete_success = clear(session)
-            session.commit()
-            if delete_success:
-                print('storage successfully cleared!')
+            clear(session)
         else:
             if action is None:
                 print('No action provided')

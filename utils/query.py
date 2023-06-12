@@ -39,18 +39,21 @@ def search(session: object, student_name: str = None) -> None:
 
 
 def delete(session: object, student_id: int) -> int:
+    session.query(Grade).filter(Grade.student_id == student_id).delete()
+    session.query(StudentClassLink).filter(StudentClassLink.student_id == student_id).delete()
     deleted_record_count = session.query(Student).filter(Student.student_id == student_id).delete()
-    if deleted_record_count > 0:
-        return True
-    return False
+    if deleted_record_count == 0:
+        print(f'No record found with student_id: {student_id}')
+        return
+    session.commit()
+    print(f'student deleted with student_id: {student_id}')
 
 
 def clear(session: object) -> None:
-    delete_success = False
     for Model in [Student, Grade, Class, StudentClassLink]:
-        if session.query(Model).delete() > 0:
-            delete_success = True
-    return delete_success
+        session.query(Model).delete()
+    session.commit()
+    print('storage successfully cleared!')
 
 
 def _get_or_create_class_records(classes: list[str], session: object) -> list[Class]:

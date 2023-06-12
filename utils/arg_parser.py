@@ -6,7 +6,7 @@ def parse_cli_args() -> tuple[Union[str, None], Union[str, None]]:
     action_help_message = '''
     upload                 -> registers student entrys from upload.json
     get <student_id>       -> prints the specified <studentId> on stdout
-    serach [student_name]  -> prints the serached <student_name> on stdout (or all records when [student_name] omitted)
+    serach [student_name]  -> prints the serached [student_name] on stdout (or all records when [student_name] is omitted)
     delete <student_id>    -> removes the specified <student_id> from the database
     clear                  -> purges all records from the database
     '''

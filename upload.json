@@ -1,8 +1,8 @@
 [
   {
     "studentId": 1,
-    "name": "Pamella",
-    "surname": "Anderson",
+    "name": "Chris",
+    "surname": "Evans",
     "classes": [
       "Literature",
       "Math",
@@ -11,16 +11,14 @@
     ],
     "grades": [
       2,
-      2,
-      2,
-      2,
-      2
+      5,
+      7
     ]
   },
   {
     "studentId": 2,
-    "name": "Pamella",
-    "surname": "Harris",
+    "name": "Chris",
+    "surname": "Williams",
     "classes": [
       "Literature",
       "Math",
@@ -28,6 +26,8 @@
       "Hungarian"
     ],
     "grades": [
+      3,
+      3
     ]
   },
   {
@@ -59,7 +59,25 @@
     "grades": [
       2,
       7,
-      4,
+      9,
+      1,
+      8
+    ]
+  },
+  {
+    "studentId": 5,
+    "name": "Clint",
+    "surname": "Eastwood",
+    "classes": [
+      "Math",
+      "Spanish",
+      "Music",
+      "Physics",
+      "Art"
+    ],
+    "grades": [
+      7,
+      1,
       1
     ]
   }
