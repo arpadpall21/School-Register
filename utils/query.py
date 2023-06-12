@@ -18,7 +18,7 @@ def update(session: object, entry: dict, student_record: Student) -> None:
 
 
 def get(session: object, student_id: int) -> None:
-    student_record = session.query(Student).get([student_id])
+    student_record = session.query(Student).get(student_id)
     if student_record is None:
         print(f'No record found with student_id: {student_id}')
         return
@@ -39,12 +39,18 @@ def search(session: object, student_name: str = None) -> None:
 
 
 def delete(session: object, student_id: int) -> int:
-    return session.query(Student).filter(Student.student_id == student_id).delete()
+    deleted_record_count = session.query(Student).filter(Student.student_id == student_id).delete()
+    if deleted_record_count > 0:
+        return True
+    return False
 
 
 def clear(session: object) -> None:
+    delete_success = False
     for Model in [Student, Grade, Class, StudentClassLink]:
-        session.query(Model).delete()
+        if session.query(Model).delete() > 0:
+            delete_success = True
+    return delete_success
 
 
 def _get_or_create_class_records(classes: list[str], session: object) -> list[Class]:

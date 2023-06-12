@@ -17,25 +17,31 @@ def main():
                     continue
                 update(session, entry, student_record)
             session.commit()
-
-        if action == 'get':
-            student_id = action_value
-            get(session, student_id)
-
-        if action == 'search':
-            student_name = action_value
-            search(session, student_name)
-
-        if action == 'delete':
-            student_id = action_value
-            deleted_record_count = delete(session, student_id)
+        elif action == 'get':
+            if action_value is None:
+                print('No student id provided: [python app.py get <student_id>]')
+                return
+            get(session, int(action_value))
+        elif action == 'search':
+            search(session, action_value)
+        elif action == 'delete':
+            if action_value is None:
+                print('No student id provided: [python app.py delete <student_id>]')
+                return
+            delete_success = delete(session, action_value)
             session.commit()
-            if deleted_record_count == 1:
-                print(f'student deleted with student_id: {student_id}')
-
-        if action == 'clear':
-            clear(session)
+            if delete_success:
+                print(f'student deleted with student_id: {action_value}')
+        elif action == 'clear':
+            delete_success = clear(session)
             session.commit()
+            if delete_success:
+                print('storage successfully cleared!')
+        else:
+            if action is None:
+                print('No action provided')
+            else:
+                print(f'Invalid action: {action}')
 
 
 if __name__ == '__main__':
